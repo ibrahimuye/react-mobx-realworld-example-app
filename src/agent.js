@@ -27,7 +27,7 @@ const tokenPlugin = req => {
 const requests = {
   del: url =>
     superagent
-      .del(`${localhost:3000/api}${url}`)
+      .del(`${API_ROOT}${url}`)
       .use(tokenPlugin)
       .end(handleErrors)
       .then(responseBody),
